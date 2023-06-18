@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import apiClinents from '../services/api-clients'
+import apiClient from '../services/api-clients'
 import { CanceledError } from "axios";
 
 
@@ -32,7 +32,7 @@ export const userGames = () => {
         const controller = new AbortController()
 
         setLoading(true)
-        apiClinents.get<FetchGameResponse>('/games', { signal: controller.signal })
+        apiClient.get<FetchGameResponse>('/games', { signal: controller.signal })
             .then(res => {
                 setGames(res.data.results)
                 setLoading(false)
