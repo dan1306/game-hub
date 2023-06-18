@@ -3,7 +3,7 @@ import React from 'react'
 
 export const GmaeCardSkeleton = () => {
     return (
-        <Card width={'300px'} borderRadius={10} overflow={'hidden'}>
+        <Card borderRadius={10} overflow={'hidden'}>
             <Skeleton
                 height={'200px'}
             />
