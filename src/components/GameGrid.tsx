@@ -6,7 +6,7 @@ import { GmaeCardSkeleton } from './GmaeCardSkeleton';
 
 export const GameGrid = () => {
 
-    const { games, err, isLoading } = userGames()
+    const { data: games, err, isLoading } = userGames()
     const skeletons = [1, 2, 3, 4, 5, 6]
 
     return (
