@@ -1,4 +1,4 @@
-import useData from "./useData";
+import userData from "./userData";
 
 
 export interface Platform {
@@ -15,4 +15,4 @@ export interface Game {
     metacritic: number
 }
 
-export const userGames = () => useData<Game>('/games')
+export const userGames = () => userData<Game>('/games')
