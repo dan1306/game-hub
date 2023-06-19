@@ -5,7 +5,7 @@ import userData from "./userData";
 export interface Platform {
     id: number;
     name: string;
-    slug: string,
+    slug: string
 }
 
 export interface Game {
@@ -16,9 +16,10 @@ export interface Game {
     metacritic: number
 }
 
-export const userGames = (selectedGenre: Genre | null) => userData<Game>('/games', {
+export const userGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null) => userData<Game>('/games', {
     params: {
-        genres: selectedGenre?.id
+        genres: selectedGenre?.id,
+        platforms: selectedPlatform?.id
     },
     
-}, [selectedGenre?.id])
+}, [selectedGenre?.id, selectedPlatform?.id])

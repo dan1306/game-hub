@@ -4,7 +4,7 @@ import useData from './userData';
 interface Platform {
 
     id: number;
-    name: String;
+    name: string;
     slug: string
 
 }
