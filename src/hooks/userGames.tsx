@@ -1,3 +1,4 @@
+import { GameQuery } from "../App";
 import { Genre } from "./useGenre";
 import userData from "./userData";
 
@@ -16,10 +17,10 @@ export interface Game {
     metacritic: number
 }
 
-export const userGames = (selectedGenre: Genre | null, selectedPlatform: Platform | null) => userData<Game>('/games', {
+export const userGames = (gameQuery: GameQuery) => userData<Game>('/games', {
     params: {
-        genres: selectedGenre?.id,
-        platforms: selectedPlatform?.id
+        genres: gameQuery.genre?.id,
+        platforms: gameQuery.platform?.id
     },
     
-}, [selectedGenre?.id, selectedPlatform?.id])
+}, [gameQuery])

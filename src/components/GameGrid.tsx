@@ -3,16 +3,15 @@ import { Platform, userGames } from '../hooks/userGames';
 import GameCard from './GameCard';
 import { GmaeCardSkeleton } from './GmaeCardSkeleton';
 import { Genre } from '../hooks/useGenre';
-
+import { GameQuery } from '../App';
 interface Props {
-    selectedGenre: Genre | null;
-    selectedPlatform: Platform | null
+    gameQuery: GameQuery
 }
 
 
-export const GameGrid = ({selectedGenre, selectedPlatform}: Props) => {
+export const GameGrid = ({ gameQuery }: Props) => {
 
-    const { data: games, err, isLoading } = userGames(selectedGenre, selectedPlatform)
+    const { data: games, err, isLoading } = userGames(gameQuery)
     const skeletons = [1, 2, 3, 4, 5, 6]
 
     return (
