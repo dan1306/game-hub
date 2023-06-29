@@ -23,7 +23,5 @@ export const SearchInput = ({onSearch}: Props) => {
 
             </InputGroup>
         </form>
-
-
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import useData from './userData';
+import useData from './useData';
 
 interface Platform {
 

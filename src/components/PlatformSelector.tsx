@@ -30,7 +30,6 @@ export const PlatformSelector = ({selectedPlatform, onSelectPlatform}: Props) =>
                         </MenuItem>
                     
                 )}
-
             </MenuList>
         </Menu>
     )
